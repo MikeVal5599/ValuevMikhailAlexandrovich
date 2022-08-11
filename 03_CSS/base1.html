@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: inline;
+        }
+        div.lv1{
+             width: 100px;
+            }
+        div.lv1 div{
+            background: ghostwhite; 
+            border: solid black 1px; 
+            position: relative; 
+            cursor: pointer;}
+        div.lv3 {
+            display: none; 
+            width: max-content;
+        }
+        div.lv3 div{
+            background: ghostwhite;
+             border: solid ghostwhite 2px; 
+             position: relative; 
+             cursor: pointer;}
+        div.lv1 div:hover div.lv3{
+             display: block;
+              position: absolute;  
+              left: 0%; 
+              top: 100%;
+             }
+        .block{ 
+            display: block;
+         }
+    
+        @media all and (max-width: 735px) {
+            div{
+                display: block;
+            }
+            div.lv1 {
+                width: 100px
+            }
+            div.lv1 div{ 
+                background-color: ghostwhite;
+                border: solid ghostwhite 2px;
+                position: relative; 
+                cursor: pointer;
+                }
+            div.lv3 {
+                width: 150px; 
+                display: none;
+            }
+            div.lv3 div {
+                background-color: ghostwhite;
+                border: solid ghostwhite 2px; 
+                cursor: pointer
+                }
+            div.lv1 div:hover div.lv3{
+                display: block;
+                position: absolute; 
+                left: 80%;
+                top: 90%;
+                z-index: 1
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="lv1">
+        <div class="lv2">Понедельник</div> 
+        <div >Вторник</div>
+        <div>Среда
+        <div class="lv3" >
+           <div class="block">Завтрак</div>
+           <div class="block">Обед</div>
+           <div class="block">Ужин</div>
+       </div>
+        </div>
+        <div>Четверг</div>
+        <div>Пятница</div>
+       </div>
+</body>
+</html>
