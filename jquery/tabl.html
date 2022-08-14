@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{ 
+            border-collapse: collapse ;border: hidden; 
+        }    
+   
+        table tr td,th{ 
+            border: dotted 2px; padding: 0px;
+        }
+        tr:nth-child(even){
+            background-color: gray;
+         }
+        .last{
+            text-align: center;
+        }
+        #button{
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <table>
+        
+        <tr id="1">
+            <th >ФИО</th>
+            <th >пол</th>
+            <th>должность</th>
+            <th>дата рож.</th>
+            <th>Данные 01</th>
+            <th>Данные 02</th>
+        </tr>
+        <tr id="2">
+            <th>Иванов Иван Иванович</th>
+            <td>М</td>
+            <td>начальник</td>
+            <td>01.01.1960</td>
+            <td>4567</td>
+            <td>3453</td>
+        </tr>
+        <tr id="3">
+            <th >Петрова Илонна Петровна</th>
+            <td >Ж</td>
+            <td >секрктарь</td>
+            <td >01.01.1989</td>
+            <td >98795</td>
+            <td >46523</td>
+        </tr>
+        <tr id="4">
+            <th>Сидоров Илья Игоревич</th>
+            <td>М</td>
+            <td>бухгалтер</td>
+            <td>01.01.1979</td>
+            <td>743434</td>
+            <td>987979</td>
+        </tr>
+        <tr id="5">
+            <th>Пупин Фёдор Фёдорович</th>
+            <td>М</td>
+            <td>водитель</td>
+            <td>01.01.1963</td>
+            <td>7432342352</td>
+            <td>94353321</td>
+        </tr>
+        <tr id="6" >
+            <th >Крупин Сергей Иванович</th>
+            <td>М</td>
+            <td>водитель 2</td>
+            <td>01.01.1983</td>
+            <td>124512321</td>
+            <td>9635232424143</td>
+        </tr>
+        <tr>
+            <td class="last" colspan="6">ДАННЫЕ О СОТРУДНИКАХ</td>  
+        </tr>
+    </table>
+    <button id="button"> Показать все сторки</button
+
+    <script 
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+    <script>
+        /* у меня открывающий script горит красным, это нормально ? Так же не работает ни одна из функций, вообще не могу понять в чем проблема */
+    $(document).ready(function($){
+        $( "#1" ).click(function() {
+            $( "#1" ).hide( "fast", function() {
+            });
+        });
+        $( "#2" ).click(function() {
+            $( "#2" ).hide( "fast", function() {
+            });
+        });
+        $( "#3" ).click(function() {
+            $( "#3" ).hide( "fast", function() {
+            });
+        });
+        $( "#4" ).click(function() {
+            $( "#4" ).hide( "fast", function() {
+            });
+        });
+        $( "#5" ).click(function() {
+            $( "#5" ).hide( "fast", function() {
+            });
+        });
+        $( "#6" ).on('click',function() {
+            $("#6").hide( "fast", function() {
+            });
+        });
+        $( "#button" ).click(function() {
+            $( "tr" ).show( "fast", function() {
+            });  
+        });   
+    ;})
+    </script>
+</body>
+</html>
